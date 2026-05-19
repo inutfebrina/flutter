@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_day1/page/landing_page.dart';
 import 'package:flutter_day1/page/page_flex_list.dart';
 import 'package:flutter_day1/page/page_material_design.dart';
+import 'package:flutter_day1/page/page_profile.dart';
 import 'package:flutter_day1/page/page_responsif.dart';
 import 'package:flutter_day1/page/page_login.dart';
 
@@ -182,6 +184,31 @@ class PageMain extends StatelessWidget {
                     backgroundColor: Colors.pinkAccent,
                   ),
                 ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ProfilePage()),
+                    );
+                  },
+                  child: Chip(
+                    label: Text('Profile') ,
+                    backgroundColor: Colors.teal,
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LandingPage()),
+                    );
+                  },
+                  child: Chip(
+                    label: Text('Landing Page') ,
+                    backgroundColor: Colors.red,
+                  ),
+                ),
+
 
               ],
             ),

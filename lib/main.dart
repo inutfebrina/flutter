@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_day1/page/page_flex_list.dart';
+import 'package:flutter_day1/page/page_material_design.dart';
 import 'package:flutter_day1/page/page_responsif.dart';
+import 'package:flutter_day1/page/page_login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,6 +34,9 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
+
+      //ubah ke page login
+      debugShowCheckedModeBanner: false,
       home: const PageMain(),
     );
   }
@@ -139,6 +144,42 @@ class PageMain extends StatelessWidget {
                   child: Chip(
                     label: Text('Responsif Media Query'),
                     backgroundColor: Colors.grey.withOpacity(0.5),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PageResponsifLayoutBuilder()),
+                    );
+                  },
+                  child: Chip(
+                    label: Text('Responsif Layout Builder'),
+                    backgroundColor: Colors.brown.withOpacity(0.5),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PageMaterialDesign()),
+                    );
+                  },
+                  child: Chip(
+                    label: Text('Material Design'),
+                    backgroundColor: Colors.deepPurple.withOpacity(0.5),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginPage()),
+                    );
+                  },
+                  child: Chip(
+                    label: Text('Login') ,
+                    backgroundColor: Colors.pinkAccent,
                   ),
                 ),
 

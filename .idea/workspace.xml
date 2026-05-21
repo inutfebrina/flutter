@@ -5,10 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cd37122-c075-42b2-9430-44b9abfa2a47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/page/landing_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/page/page_profile.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/counterapp_provider/counter_provider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/counterapp_provider/counter_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/model_task.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/page/page_go_navigator.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/providers/todo_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/TodopageScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/widget/add_task_field.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/widget/filter_bar.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/widget/task_list.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/widget/task_stats.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main1.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/page/landing_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/page/landing_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +46,12 @@
     &quot;assignee&quot;: &quot;inutfebrina&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/inutfebrina/flutter.git",
-    "accountId": "f9ec8080-446d-4f58-a847-46726b5d58e4"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/inutfebrina/flutter.git&quot;,
+    &quot;accountId&quot;: &quot;f9ec8080-446d-4f58-a847-46726b5d58e4&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 2

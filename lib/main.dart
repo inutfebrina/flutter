@@ -1,49 +1,81 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_day1/counterapp_provider/counter_provider.dart';
 import 'package:flutter_day1/page/landing_page.dart';
 import 'package:flutter_day1/page/page_flex_list.dart';
+import 'package:flutter_day1/page/page_go_navigator.dart';
 import 'package:flutter_day1/page/page_material_design.dart';
 import 'package:flutter_day1/page/page_profile.dart';
 import 'package:flutter_day1/page/page_responsif.dart';
 import 'package:flutter_day1/page/page_login.dart';
+import 'package:flutter_day1/providers/todo_model.dart';
+import 'package:flutter_day1/views/TodopageScreen.dart';
+import 'package:provider/provider.dart';
+import 'package:go_router/go_router.dart';
+import 'counterapp_provider/counter_screen.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+// void main() {
+//   runApp(
+//     ChangeNotifierProvider(
+//         create: (context)=> TodoModel(),
+//       // create: (context)=> CounterProvider(),
+//         child: const MyApp(),
+//     )
+//       );
+// }
 
+void main() => runApp(const MyApp());
+
+final GoRouter _router = GoRouter(
+  routes: <RouteBase>[
+    GoRoute(
+      path: '/',
+      builder: (BuildContext context, GoRouterState state) {
+        return const PageGoNavigator();
+      },
+      routes: <RouteBase>[
+        GoRoute(
+          path: 'details',
+          builder: (BuildContext context, GoRouterState state) {
+            return const DetailsScreen();
+          },
+        ),
+      ],
+    ),
+  ],
+);
+
+/// The main app.
 class MyApp extends StatelessWidget {
+  /// Constructs a [MyApp]
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-      ),
-
-      //ubah ke page login
-      debugShowCheckedModeBanner: false,
-      home: const PageMain(),
-    );
+    return MaterialApp.router(routerConfig: _router);
   }
 }
 
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+//
+//   // This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Demo',
+//       theme: ThemeData(
+//
+//         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+//       ),
+//
+//       //ubah ke page login
+//       debugShowCheckedModeBanner: false,
+//       home: const PageMain(),
+//       // home: const Todopagescreen(),
+//     );
+//   }
+// }
+//
 
 class PageMain extends StatelessWidget {
   const PageMain({super.key});
@@ -206,6 +238,32 @@ class PageMain extends StatelessWidget {
                   child: Chip(
                     label: Text('Landing Page') ,
                     backgroundColor: Colors.red,
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PageCounterScreen()),
+                    );
+                  },
+                  child: Chip(
+                    label: Text('Counter Screen') ,
+                    backgroundColor: Colors.amber,
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PageGoNavigator()),
+                    );
+                  },
+                  child: Chip(
+                    label: Text('Go Navigator', style: TextStyle(
+                      color: Colors.white,
+                    ),) ,
+                    backgroundColor: Colors.blueGrey,
                   ),
                 ),
 

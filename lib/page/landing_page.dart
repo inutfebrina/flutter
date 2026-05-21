@@ -24,7 +24,7 @@ class LandingPage extends StatelessWidget {
           children: const [
             _HeroSection(),
             _FeaturesSection(),
-            _TestimonialsSection(),
+            // _TestimonialsSection(),
             _CTASection(),
             _Footer(),
           ],
